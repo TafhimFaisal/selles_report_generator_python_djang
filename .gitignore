@@ -3,3 +3,5 @@
 /Scripts
 pyvenv.cfg
 /.vscode
+/src/media/*
+/src/db.sqlite3
