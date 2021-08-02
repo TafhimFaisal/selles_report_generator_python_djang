@@ -29,7 +29,7 @@ class Sale(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"Seles for the amout of {self.totat_price} "
+        return f"Seles for the amout of ${self.totat_price} "
 
     def save(self, *args,**kwargs):
         if self.transation_id == "":
@@ -38,7 +38,7 @@ class Sale(models.Model):
             self.craeted = timezone.now()
         return super().save(*args,**kwargs)
 
-    def get_position(self):
+    def get_possitions(self):
         return self.possition.all()
 
 class CSV(models.Model):
